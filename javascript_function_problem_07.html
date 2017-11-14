@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+      function height() {
+          var CM = new Array();
+          CM[0] = new Array();
+          CM[1] = new Array();
+          CM[2] = new Array();
+        /*  for(var q=0;q<CM.length;q++){
+            for(var w=0;w<CM[q].length;w++){
+                CM[q][w] = 0;
+            }
+          }
+          for(var e=0;e<CM.length;e++){
+            for(var r=0;r<CM[e].length;r++){
+                document.write(CM[q][w]);
+            }
+          }*/
+          for(var i=0;i<arguments.length;i++){
+            for(var j=0;j<arguments[i].length;j++)
+              if(arguments[i].substr(j,1)=='O'){
+                  parseInt(CM[a][j]) = parseInt(CM[i][j])+1;
+                    document.write("circle"+CM[a][j]+"<br>")
+                    document.write(typeof(CM[a][j])+"<br>")}
+              else if(j=='n'){
+                  document.write("<br>");
+                  break;
+              }
+        }
+
+
+
+      }
+      document.write("교수님, 문제가 너무 어려줘서 못풀었습니다ㅠㅠ")
+
+      exepect(height('O', 'OOOO\nOOOO'), '2 1 1 1\n1 1 1 1');
+      exepect(height('OOOO', 'OOOO\nOOOO'), '2 2 2 2\n1 1 1 1');
+      exepect(height('OO\nOO', 'OOOO\nOOOO'), '2 2 1 1\n2 2 1 1');
+      exepect(height('OO\nOO\nOO', 'OOOO\nOOOO'), '2 2 1 1\n2 2 1 1\n1 1 0 0');
+      exepect(height('O', 'OOOO\nOOOO', 'OOOO'), '3 2 2 2\n1 1 1 1');
+      exepect(height('OOOO', 'OOOO\nOOOO', 'OOOO'), '3 3 3 3\n1 1 1 1');
+      exepect(height('OO\nOO', 'OOOO\nOOOO', 'OOOO'), '3 3 2 2\n2 2 1 1');
+      exepect(height('OO\nOO\nOO', 'OOOO\nOOOO', 'O\nO\nO\nO'), '3 2 1 1\n3 2 1 1\n2 1 0 0\n1 0 0 0');
+      exepect(height('O', 'O', 'O'), '3');
+
+      function exepect(l, r) {
+        if (l === r)
+         console.log('pass');
+        else
+         console.log('fail');
+      }
+    </script>
+</head>
+<body>
+</body>
+</html>

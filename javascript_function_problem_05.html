@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+      function print_fizz_buzz() {
+        for(var i=1; i<=100; i++){
+            if(i%3 == 0 && i%5 == 0)//3이랑 5로 나눠서 0이되는 3의배수 && 5의배수, 두개 조건이 일치하는 것부터 찾아서 피즈버즈를 출력해준다.
+                document.write(i + ' : FizzBuzz<br>');
+            else if(i%3 == 0)//3으로 나눠서 0이 되는 3의 배수를 찾아서 피즈를 출력해준다.
+                document.write(i + ' : Fizz<br>');
+            else if(i%5 == 0)//5으로 나눠서 0이 되는 5의 배수를 찾아서 버즈를 출력해준다.
+                document.write(i + ' : Buzz<br>');
+            else//나머지는 그냥 숫자(i)를 출력해준다.
+                document.write(i + ' : ' + i + '<br>');
+        }
+      }
+      print_fizz_buzz();
+    </script>
+</head>
+<body>
+</body>
+</html>

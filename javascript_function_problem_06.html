@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <pre>
+    <script type="text/javascript">
+      function print_scores_chart() {
+        var max=arguments[0]; //최대값에 대한 처음 값 대입
+        var min=arguments[0]; //최소값에 대한 처음 값 대입
+        for(var p = 0 ; p < arguments.length; p++){ //최대값 최소값 구하기 위한 반복문
+          if(max<arguments[p]){
+            max = arguments[p]; //최대값보다 큰 인수가 나올경우 최대값에 대입
+          }
+          if(min>arguments[p]){
+            min = arguments[p]; //최소값보다 작은 인수가 나올경우 최소값에 대입
+          }
+        }
+        document.write("<br>");//깔끔하게 보이기 위한 엔터
+        document.write("------------"+"<br>");
+        for (var i = 0; i < 10; i++){
+          for(var j = 0 ; j < arguments.length; j++){//별을 찍어주기 위한 중첩 포문이야
+            if(10-i<=arguments[j]){//세로로 찍어주기 위해서 각 별 위치에 대한 관계식을 구했다.10-i는 엘리베이터를 생각하면 편하다.
+              document.write("* ");//관계가 맞으면 별표
+            }else{ document.write("  "); }//아니면 공백
+          }
+          if(10-i==max){//아까 정해준 최대값을 각 층과 비교해서 최대층인 친구를 찾아준다
+            document.write("<--max");
+          }
+          if(10-i==min){//아까 정해준 최소값을 각 층과 비교해서 최소층인 친구를 찾아준다
+            document.write("<--min");
+          }
+          document.write("<br>");//줄바꿈을 위한 프린트문
+        }
+        document.write("------------"+"<br>");
+      }
+
+
+      print_scores_chart(1, 2, 3, 4, 5);
+      print_scores_chart(10, 1, 10, 1, 5, 5);
+      print_scores_chart(5, 2, 2, 9, 3, 5, 9);
+    </script>
+    </pre
+</head>
+<body>
+</body>
+</html>
